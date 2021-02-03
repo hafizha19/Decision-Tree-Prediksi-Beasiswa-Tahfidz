@@ -9,6 +9,10 @@ penilaian kriteria
 @endsection
 
 @section('content')
+{{-- @php
+    $k = \App\Kriteria::where('user_id', '=', Auth::user()->id)->get();    
+@endphp
+@dump($k->pluck('id')->values()->toArray()) --}}
 <div class="container-fluid">
 
     @if (session('error'))
@@ -20,7 +24,7 @@ penilaian kriteria
                 <div class="card-header">
                     <div class=" row justify-content-center">
 
-                        <h5>Nilai Kriteria</h5>
+                        <h5>Nilai Kriteria (Eigen Vector)</h5>
                     </div>
                 </div>
                 <div class="card-body">
@@ -30,21 +34,21 @@ penilaian kriteria
                             <thead>
                                 <tr>
                                     <th>Nama Kriteria</th>
-                                    <th>Hapus</th>
+                                    <th>Nilai</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($data as $d)
+                                {{-- @foreach ($data as $d) --}}
                                 <tr>
                                     <td>
-                                        {{$d->nama}}
+                                        {{-- {{$d->nama}} --}}
 
                                     </td>
                                     <td>
                                         
                                     </td>
                                 </tr>
-                                @endforeach
+                                {{-- @endforeach --}}
                             </tbody>
                         </table>
                     </div>

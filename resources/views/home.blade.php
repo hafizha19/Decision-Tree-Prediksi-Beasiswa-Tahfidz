@@ -1,26 +1,30 @@
 @extends('layouts.app')
-
+@section('header')
+Dashboard
+@endsection
 @section('content')
-<!-- Page Heading -->
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-</div>
 
 <div class="container-fluid">
 
     <div class="row  justify-content-center">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-4 text-gray-800">Desicion Support System</h1>
+        <h1 class="h3 mb-4 text-gray-800">Desicion Tree C 4.5</h1>
     </div>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Tree</h6>
         </div>
         <div class="card-body">
-            <div class="table-responsive">
+            @php
+                reset($tree);
+                $root = key($tree);
+            @endphp
+            <p>Root Node: {{$root}}</p>
+            <p>First Calculate: @dump($tree)</p>
+            {{-- <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
@@ -501,7 +505,9 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div> --}}
+            <p>Simulasi Output: </p>
+            <img src="/output.png" alt="" class="img-fluid">
         </div>
     </div>
 

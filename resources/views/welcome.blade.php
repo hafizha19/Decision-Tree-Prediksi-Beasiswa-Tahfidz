@@ -108,7 +108,7 @@
         <div class="white"></div>
         <div class="boxfather">
             <div class="box">
-                <h1>DSS</h1>
+                <h1>Decision Tree C4.5</h1>
                 <h1>Online Learning Method</h1>
                 <button><a href="login">Login</a></button>
             </div>
